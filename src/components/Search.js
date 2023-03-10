@@ -1,9 +1,9 @@
 function Search() {
-    return (
-        <div>
-            SEARCH
-        </div>
-    )
+  return (
+    <div>
+        Search
+    </div>
+  )
 }
 
-export default Search
+export default Search;
