@@ -1,8 +1,6 @@
-import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route } from 'react-router-dom';
+import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route, Router } from 'react-router-dom';
 
-import Navbar from './components/Navbar';
 import Search, { searchLoader } from './components/Search';
-import Footer from './components/Footer';
 
 import NotFound from './components/NotFound';
 import RootLayout from './layouts/RootLayout';
@@ -34,6 +32,7 @@ const router = createBrowserRouter(
 function App() {
   return (
     <div className="">
+    <RouterProvider router={router} />
     </div>
   );
 }

@@ -1,7 +1,6 @@
 import { useLoaderData, useLocation, useParams } from "react-router-dom"
 
 export default function CurrencyDetails() {
-    const { id } = useParams()
     const currency = useLoaderData()
     const location = useLocation()
 
@@ -16,7 +15,7 @@ export default function CurrencyDetails() {
 
 export const currencyDetailsLoader = async ({ params }) => {
     var myHeders = new Headers()
-    myHeders.append("apikey", "apikey")
+    myHeders.append("apikey", '0GM5sJHuNTrIttSw06qsMbkw75dhLP6A')
 
   const requestOptions = {
     method: 'GET',

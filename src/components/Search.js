@@ -1,10 +1,9 @@
 import { useState } from "react";
-
 import { useLoaderData, useNavigate } from "react-router-dom";
-
 
 import Select from 'react-select'
 import makeAnimated from 'react-select/animated'
+
 
 function Search() {
     const navigate = useNavigate()
@@ -61,7 +60,7 @@ export default Search;
 export const searchLoader = async () => {
 
     let myHeaders = new Headers()
-    myHeaders.append("apikey", 'apikey')
+    myHeaders.append("apikey", '0GM5sJHuNTrIttSw06qsMbkw75dhLP6A')
 
     let requestOptions = {
         method: 'GET',
