@@ -7,10 +7,11 @@ import RootLayout from './layouts/RootLayout';
 import HelpLayout from './layouts/HelpLayout';
 import CurrencyDetails, { currencyDetailsLoader } from './components/CurrencyDetails';
 import CurrencyLayout from './layouts/CurrencyLayout';
+import CurrencyError from './components/CurrencyError';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path='/' element={<RootLayout/>}>
+    <Route path='/' element={<RootLayout/>} errorElement={<CurrencyError />}>
       <Route index element={<Search />} loader={searchLoader}/>
       <Route path="help" element={<HelpLayout />}>
         <Route path="faq" />

@@ -23,7 +23,7 @@ function Search() {
       console.log(amount)
         // concat variables to pass to navigate
         let id = `${fromCurrency.value}_${toCurrency.value}_${amount}`
-        navigate(`/currency/${id}`, {state: {fromCurrencyName: fromCurrency.label, toCurrencyName: toCurrency.label, amount: amount}})
+        navigate(`/currency/${id}`, {state: {fromCurrencySymbol: fromCurrency.value, fromCurrencyName: fromCurrency.label, toCurrencySymbol: toCurrency.value, toCurrencyName: toCurrency.label, amount: amount}})
     }
    
     const handleChange = (e) => {
@@ -72,15 +72,18 @@ export const searchLoader = async () => {
 
     if (data.success === false) 
     {
-        return "ERROR"
+      throw Error("Something went wrong")
     }
 
     // Manipulate data to be in a "Value", "Label" object for react-select
     let options = []
 
     Object.entries(data.symbols).map(([k, v]) => {
+        console.log(k)
         options.push({value: `${k}`, label: `${v}`})
     })
+
+    console.log(options)
 
     return options
 }
